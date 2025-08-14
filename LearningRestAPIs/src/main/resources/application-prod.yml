@@ -1,0 +1,5 @@
+spring:
+  datasource:
+    url: postgresql://postgres:vxzexajgPVwYpNqiqyInyPGXtpqRVtkp@postgres.railway.internal:5432/railway
+    username: postgres
+    password: vxzexajgPVwYpNqiqyInyPGXtpqRVtkp

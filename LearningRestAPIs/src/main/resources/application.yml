@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: LearningRestAPIs
+  profiles:
+    active: ${ENV:dev}
+
+jpa:
+  hibernate:
+    ddl-auto: update
+  properties:
+    hibernate:
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+
+server:
+  servlet:
+    context-path: /api
+  port: 9090
