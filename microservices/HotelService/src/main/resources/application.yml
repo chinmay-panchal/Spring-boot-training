@@ -1,0 +1,24 @@
+server:
+  port: 4042
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/microservices
+    username: chinmay
+    password: test@123
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  application:
+    name: HOTEL-SERVICE
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:4000/eureka
