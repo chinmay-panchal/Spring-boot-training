@@ -1,0 +1,23 @@
+# src/main/resources/application.yml
+
+server:
+  port: 8889
+
+spring:
+  application:
+    name: CONFIG-SERVER
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/chinmay-panchal/microservice-tutorial-config
+          clone-on-start: true
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:4000/eureka

@@ -18,13 +18,28 @@ spring:
             - id: HOTEL-SERVICE
               uri: lb://HOTELSERVICE
               predicates:
-                - Path=/hotels/**, /staffs/**
-#                - Path=/**
+                - Path=/hotels/**,/staffs/**
 
             - id: RATING-SERVICE
               uri: lb://RATINGSERVICE
               predicates:
                 - Path=/ratings/**
+  security:
+    oauth2:
+      client:
+        registration:
+          okta:
+            client-id: 0oav799z0bZZiHQob697
+            client-secret: PirxVVyq-icERT2pz6wjKlFZ2tKR5OwkowQoFbKvi_rcQYHBUBvPAK03IqmoJNsf
+            scope: openid, profile, email, offline_access
+            redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
+        provider:
+          okta:
+            issuer-uri: https://integrator-7637524.okta.com/oauth2/default
+
+      resourceserver:
+        jwt:
+          issuer-uri: https://integrator-7637524.okta.com/oauth2/default
 
 eureka:
   instance:
@@ -34,3 +49,13 @@ eureka:
     register-with-eureka: true
     service-url:
       defaultZone: http://localhost:4000/eureka
+
+#okta-configuration for api-gateway
+
+#okta:
+#  oauth2:
+#    issuer: https://integrator-7637524.okta.com/oauth2/default
+#    audience: api://default
+#    client-id: 0oav799z0bZZiHQob697
+#    client-secret: PirxVVyq-icERT2pz6wjKlFZ2tKR5OwkowQoFbKvi_rcQYHBUBvPAK03IqmoJNsf
+#    scopes: openid, profile, email, offline_access

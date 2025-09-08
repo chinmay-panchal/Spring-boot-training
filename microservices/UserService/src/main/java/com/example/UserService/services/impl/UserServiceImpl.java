@@ -80,6 +80,7 @@ public class UserServiceImpl implements UserService {
                 try {
                     Hotel hotel = hotelService.getHotelById(rating.getHotelId());
                     if (hotel != null) {
+
                         rating.setHotel(hotel);
                         logger.info("Successfully fetched hotel with id: {}", rating.getHotelId());
                     } else {
@@ -87,6 +88,7 @@ public class UserServiceImpl implements UserService {
                     }
                 } catch (Exception e) {
                     logger.error("Failed to fetch hotel with id: {} - Error: {}", rating.getHotelId(), e.getMessage());
+                    throw e;
                 }
 
                 return rating;
@@ -96,6 +98,7 @@ public class UserServiceImpl implements UserService {
 
         } catch (Exception e) {
             logger.error("Failed to fetch ratings from RATING-SERVICE", e);
+            throw e;
         }
 
         return user;
