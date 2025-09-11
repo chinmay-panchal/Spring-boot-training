@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/EmployeeApiLearning/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LearningRestAPIs/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/MonoTodo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/application-management-system/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hospitalManagement/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jwtExample3/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/microservices/ApiGateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/microservices/ConfigServer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/microservices/HotelService/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/microservices/RatingService/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/microservices/ServiceRegisery/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/microservices/UserService/src/main/java" charset="UTF-8" />
+  </component>
+</project>
